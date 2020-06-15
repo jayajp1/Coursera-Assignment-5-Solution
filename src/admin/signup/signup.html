@@ -1,0 +1,75 @@
+<html>
+<body>
+  <div class=container>
+
+    <fieldset>
+      <legend style="color:white; textalign:center">Registration Form</legend>
+      <form name="regForm" novalidate>
+        <div class="form-group">
+          <label>Firstname</label>
+          <input type="text" class="form-control" name="fname" ng-model="signupCtrl.user.fname"
+           placeholder="Enter FirstName" required>
+          <span ng-if="regForm.fname.$error.required && regForm.fname.$touched">
+            Enter FirstName
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label>Lastname</label>
+          <input type="text" class="form-control" name="lname" placeholder="Enter LastName"
+          ng-model="signupCtrl.user.lname" required>
+          <span ng-if="regForm.lname.$error.required && regForm.lname.$touched">
+            Enter LastNAme
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" class="form-control" name="uemail" ng-model="signupCtrl.user.email"
+           placeholder="Enter Email_Id" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" required>
+          <span ng-if="regForm.uemail.$error.required && regForm.uemail.$touched">
+            Enter Email_Id
+          </span>
+          <span ng-if="regForm.uemail.$invalid && regForm.uemail.$touched">
+            Enter Email_Id in Format like jay@gmail.com
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label>MobileNo</label>
+          <input type="text" class="form-control" name="umobileno" ng-model="signupCtrl.user.MobileNo"
+          placeholder="Enter MobileNo" pattern="(\d{3})-(\d{3})-(\d{4})" required>
+          <span ng-if="(regForm.umobileno.$error.required && regForm.umobileno.$touched)
+          || (regForm.umobileno.$invalid && regForm.umobileno.$touched)">
+            Enter MobileNo in Format="999-xxx-xxxx"
+          </span>
+          <!--    <span ng-if="regForm.umobileno.$invalid">
+            Enter MobileNo in Format="999-xxx-xxxx"
+          </span>-->
+        </div>
+        <div class="form-group">
+          <label>Favorite Item (Shortname)</label>
+          <input type="text" class="form-control" name="ufavitem" placeholder="Enter Favorite Item (ShortName)"
+          ng-model="signupCtrl.user.favitemname" required>
+          <span ng-if="regForm.ufavitem.$error.required && regForm.ufavitem.$touched">
+            Enter ShortName OF Your Favorite Item
+          </span>
+        </div><br />
+        <div>
+        <button type="submit" id="btnsubmit" class="btn btn-primary"
+        style="width:250px" ng-disabled="regForm.$invalid" ng-click="signupCtrl.submit()">Submit</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="index.html">Back to HOME</a>
+        </div>
+        <div id="info" ng-if="signupCtrl.completed">
+          <p>Registration completed..</p>
+        </div>
+
+      </form>
+    </fieldset>
+
+  </div>
+
+  </body>
+
+</html>
