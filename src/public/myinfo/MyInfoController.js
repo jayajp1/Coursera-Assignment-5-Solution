@@ -2,8 +2,6 @@
 
   angular.module('public')
     .controller('myInfoController', MyInfoController)
-
-
 //MyInfoController.$inject = ['userService'];
 //function MyInfoController(userService) {
 
