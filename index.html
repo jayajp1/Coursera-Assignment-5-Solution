@@ -52,15 +52,15 @@
                 <span class="glyphicon glyphicon-home"></span> Home</a>
             </li>
            <li id="navMenuButton" ui-sref-active="active">
-            <!--  <a ui-sref="public.menu">
-                <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a>-->
+             <a ui-sref="public.menu">
+                <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a>
             </li>
             <li>
-              <a ui-sref="admin.myinfo">
+              <a ui-sref="public.myinfo">
                 <span class="glyphicon glyphicon-info-sign" ui-sref-active="active"></span><br class="hidden-xs">MyInfo</a>
             </li>
             <li>
-              <a ui-sref="admin.signup">
+              <a ui-sref="public.signup">
                 <button type="button" class="btn btn-secondary" ui-sref-active="active">SignUp</button>
             </li>
             <li id="phone" class="hidden-xs">
@@ -138,13 +138,14 @@
   <script src="src/public/menu/menu.controller.js"></script>
   <script src="src/public/menu-category/menu-category.component.js"></script>
   <script src="src/public/menu-items/menu-items.controller.js"></script>
+    <script src="src/public/myinfo/myinfo.component.js"></script>
   <script src="src/public/menu-item/menu-item.component.js"></script>
 
   <!-- ADMIN SITE -->
-  <script src="src/admin/admin.module.js"></script>
-  <script src="src/admin/admin.route.js"></script>
-  <script src="src/admin/signup/signupController.js"></script>
-  <script src="src/admin/MyInfo/MyInfoController.js"></script>
+<!--  <script src="src/public/admin.module.js"></script>
+  <script src="src/public/admin.route.js"></script>-->
+  <script src="src/public/signup/signupController.js"></script>
+  <script src="src/public/MyInfo/MyInfoController.js"></script>
   <!--Application files -->
 
 </body>

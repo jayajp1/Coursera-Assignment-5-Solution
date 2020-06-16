@@ -4,7 +4,7 @@
 /**
  * Restaurant module that includes the admin module as a dependency
  */
-angular.module('restaurant', ['admin'])
+angular.module('restaurant', ['public'])
 .config(config);
 
 config.$inject = ['$urlRouterProvider'];

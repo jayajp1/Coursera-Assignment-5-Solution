@@ -8,21 +8,22 @@ function userService() {
   var service = this;
   // List of shopping items
   var register=false;
-  var userList = [];
-  service.addItem = function(fname, lname, MobileNo, email, favitemname,register) {
-    var item = {
-      fname: fname,
-      lname: lname,
-      MobileNo: MobileNo,
-      email: email,
-      favitemname: favitemname,
-      register:register
+    var userList=[];
+  service.addItem = function(newUser) {
+    userList = {
+      fname: newUser.fname,
+      lname: newUser.lname,
+      MobileNo: newUser.MobileNo,
+      email: newUser.email,
+      favitemname: newUser.favitemname,
+  //    register:newUser.egister
     };
-    userList.push(item);
-  //  console.log(userList);
+  //  userList.push(item);
+   console.log(userList);
   };
 
   service.getUserList = function() {
+    console.log("Get");
     return userList;
     console.log(userList);
   };
