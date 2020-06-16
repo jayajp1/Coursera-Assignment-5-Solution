@@ -1,7 +1,7 @@
 (function() {
 
   angular.module('public')
-    .controller('myInfoController', MyInfoController)
+    .controller('MyInfoController', MyInfoController)
 //MyInfoController.$inject = ['userService'];
 //function MyInfoController(userService) {
 
